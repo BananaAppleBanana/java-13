@@ -1,0 +1,34 @@
+1. write spring boot application
+2. send request 3rd party api(at service layer) , get response merge result
+3. write logic in service layer
+4. handle exceptions
+5. use RestTemplate library
+
+   steps to use RestTemplate
+1. config it in configuration class
+2. inject it in your service layer
+3. create pojo to match 3rd party response
+4. do not use string.class
+    getForObject(url, Pojo.class)
+
+    {
+        data: {
+            name: ".."
+        }
+    }
+
+    class PojoA {
+        PojoB data;
+    }
+    class PojoB {
+        String name;
+    }
+
+
+    Requirements
+1. First api: send request to http://universities.hipolabs.com/search?country=United+Kingdom
+   Provide different country as input , get all result and return one json response U.K. is example
+2. 2nd api send to : http://universities.hipolabs.com/search
+
+    Note: if the user send 10 countries to your api, your api should send 10 requests to 3rd party api.
+    ****You can use multithreading****
