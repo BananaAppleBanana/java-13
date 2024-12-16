@@ -32,3 +32,13 @@
 
     Note: if the user send 10 countries to your api, your api should send 10 requests to 3rd party api.
     ****You can use multithreading****
+
+
+
+Homework Review
+1. use constructor injection
+2. config 3rd api / url in a diff class or application.properties
+3. naming style
+4. @GetMapping(value = "/search", params={})
+5. create service interface
+6. create packages

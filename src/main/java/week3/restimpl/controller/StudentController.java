@@ -28,8 +28,15 @@ public class StudentController {
         this.ss = ss;
     }
 
-    @GetMapping("/students")
-    public ResponseEntity<List<StudentDTO>> getAllStudent(@RequestParam(value = "name", required = false) String name) {
+    @GetMapping(value = "/students", params = {"name"})
+    public ResponseEntity<List<StudentDTO>> getAllStudent1(@RequestParam(value = "name", required = false) String name) {
+        return new ResponseEntity<>(
+                ss.getAll().stream().map(s -> new StudentDTO(s.getName())).collect(Collectors.toList()),
+                HttpStatus.OK
+        );
+    }
+    @GetMapping(value = "/students", params = {"another-parameter"})
+    public ResponseEntity<List<StudentDTO>> getAllStudent2(@RequestParam(value = "name", required = false) String name) {
         return new ResponseEntity<>(
                 ss.getAll().stream().map(s -> new StudentDTO(s.getName())).collect(Collectors.toList()),
                 HttpStatus.OK
