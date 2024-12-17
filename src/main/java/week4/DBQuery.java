@@ -81,6 +81,51 @@
  * )
  *
  *
+ * --cross join
+ * select *
+ * from tableA, tableB
+ * where ...
+ *
+ * tableA	tableB
+ *  1		 4
+ *  2		 5
+ *  3
+ *
+ * result set
+ * col1,  col2
+ * 1,		4
+ * 1,		5
+ * 2,		4
+ * 2,		5
+ * 3,		4
+ * 3,		5
+ *
+ * --inner join
+ * --departments: DEPARTMENT_ID(primary)	DEPARTMENT_NAME	MANAGER_ID	LOCATION_ID
+ * --employees: EMPLOYEE_ID(primary)	FIRST_NAME	LAST_NAME SALARY MANAGER_ID	DEPARTMENT_ID(foreign key)
+ * select * from hr.employees e join hr.departments d on e.department_id = d.department_id
+ *
+ * select * from hr.employees e, hr.departments d where e.department_id = d.department_id
+ *
+ *
+ * --outer join : left join / right join / full join
+ * select * from hr.employees e right join hr.departments d on e.department_id = d.department_id
+ * where e.employee_id is null
+ *
+ *
+ * --write a query to count employee number in each department
+ * --return dept_id, dept_name, employee_number
+ *
+ * select d.department_id as dept_id, d.department_name as dept_name, count(e.employee_id) as employee_number
+ * from hr.departments d left join hr.employees e on e.department_id=d.department_id
+ * group by d.department_id, d.department_name
+ *
+ *
+ * ---join 3 tables
+ * select
+ * from A join B on xx join C on xxx
+ *
+ *
  * Tomorrow:
  *     join = inner join
  * 	outer join
