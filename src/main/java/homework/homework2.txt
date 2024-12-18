@@ -1,0 +1,9 @@
+ Homework
+ 1. create 3 tables , student m - m teacher
+ 2. create endpoints
+        a. fetch all students (.. filter by age..)
+        b. fetch related teacher info by student id
+        c. CRUD of student
+ 3. entity classes,  1 - m m - 1
+ 4. do not use spring data jpa interface
+ 5. include your sql script in your project
