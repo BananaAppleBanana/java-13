@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class RandomPick {
     public static void main(String[] args) {
-        group();
+        individual();
     }
 
     private static void individual() {
