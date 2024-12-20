@@ -1,0 +1,15 @@
+1. create a spring boot project
+2. add spring security in project (authentication manager, user details, user details service)
+3. provide /auth/login to authenticate user login
+    return a jwt token to user
+4. provide jwt token filter and utility to verify jwt
+5. @PreAuthorize on top of /test to verify your token
+
+
+training restarts at Dec 30th
+technical mock interview
+1. cover all topics from first day
+2. coding: stream api, rest endpoint impl design
+   entity mapping + annotations
+   white board
+

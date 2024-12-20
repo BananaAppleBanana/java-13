@@ -2,8 +2,13 @@
  1. create 3 tables , student m - m teacher
  2. create endpoints
         a. fetch all students (.. filter by age..)
+           @GetMapping(value = "..")
         b. fetch related teacher info by student id
         c. CRUD of student
  3. entity classes,  1 - m m - 1
+        student 1 - m registration / class  m - 1 teacher
  4. do not use spring data jpa interface
+        Hibernate -> session / entitymanager
  5. include your sql script in your project
+
+
