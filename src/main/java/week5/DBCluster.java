@@ -120,10 +120,12 @@ package week5;
  *     follower     follower                follower follower
  *
  *   *   *    *     *     *     *     *     *     *     *     *     *    *
+ *      Election algorithm Raft
  *
- *   1. Cache strategy
- *   2. Election algorithm Raft
- *   3. Message queue
- *   4. Global transaction
+ *      zookeeper
+ *
+ *      Leader     Candidate      Follower
+ *
+ *
  *
  */
